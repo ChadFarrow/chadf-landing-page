@@ -47,7 +47,7 @@ export const projectSections: ProjectSection[] = [
       {
         name: 'MSP 2.0',
         description: 'Music Side Project Studio - RSS feed editor for creating Podcasting 2.0 music albums and publisher catalogs with V4V support.',
-        url: 'https://msp.podtards.com',
+        url: 'https://new.musicsideproject.com',
         github: 'https://github.com/ChadFarrow/MSP-2.0',
         icon: '🎚️',
         image: '/logos/msp.png',
