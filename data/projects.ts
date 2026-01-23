@@ -1,5 +1,5 @@
 export type AccentColor = 'lightning' | 'nostr' | 'podcast';
-export type BadgeType = 'live' | 'template' | 'bot' | 'bridge' | 'starter' | 'reference';
+export type BadgeType = 'app' | 'template' | 'bot' | 'bridge' | 'starter' | 'reference';
 
 export interface Project {
   name: string;
@@ -29,7 +29,7 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/stablekraft-app',
         icon: '🎵',
         image: '/logos/stablekraft.webp',
-        badge: 'live',
+        badge: 'app',
         tech: ['Next.js', 'Nostr', 'Lightning', 'PWA'],
         accent: 'podcast',
       },
@@ -40,7 +40,7 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/ITDV-Lightning',
         icon: '⚡',
         image: '/logos/itdv.jpg',
-        badge: 'live',
+        badge: 'app',
         tech: ['Next.js', 'Bitcoin Connect', 'WebLN'],
         accent: 'lightning',
       },
@@ -51,7 +51,7 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/MSP-2.0',
         icon: '🎚️',
         image: '/logos/msp.png',
-        badge: 'live',
+        badge: 'app',
         tech: ['React', 'Nostr', 'RSS'],
         accent: 'podcast',
       },
@@ -129,7 +129,7 @@ export const projectSections: ProjectSection[] = [
         description: 'Self-hosted MusicL playlist using Podcasting 2.0 music medium tags. Static documentation and playlist assets.',
         url: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
         github: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
-        icon: '🎶',
+        icon: '📝',
         badge: 'reference',
         tech: ['Podcasting 2.0', 'MusicL'],
         accent: 'lightning',

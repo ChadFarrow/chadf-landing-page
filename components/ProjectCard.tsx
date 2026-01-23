@@ -14,14 +14,10 @@ function GitHubIcon() {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const badgeClass = project.badge === 'live'
-    ? 'live'
-    : project.badge === 'template' || project.badge === 'starter'
-    ? 'template'
-    : '';
+  const badgeClass = project.badge || '';
 
   return (
-    <div className={`project-card ${project.accent}`}>
+    <div className={`project-card ${project.badge || ''}`}>
       <div className="project-header">
         <div className="project-icon">
           {project.image ? (

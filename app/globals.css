@@ -5,6 +5,9 @@
   --lightning: #f7931a;
   --nostr: #9d4edd;
   --podcast: #00d4aa;
+  --blue: #3b82f6;
+  --pink: #ec4899;
+  --yellow: #eab308;
   --text-primary: #e8e8ed;
   --text-muted: #6b6b7a;
   --border: #2a2a3a;
@@ -197,9 +200,12 @@ header {
   opacity: 1;
 }
 
-.project-card.lightning { --accent-color: var(--lightning); }
-.project-card.nostr { --accent-color: var(--nostr); }
-.project-card.podcast { --accent-color: var(--podcast); }
+.project-card.app { --accent-color: var(--podcast); }
+.project-card.template { --accent-color: var(--nostr); }
+.project-card.bot { --accent-color: var(--lightning); }
+.project-card.bridge { --accent-color: var(--blue); }
+.project-card.starter { --accent-color: var(--pink); }
+.project-card.reference { --accent-color: var(--yellow); }
 
 .project-header {
   display: flex;
@@ -245,17 +251,29 @@ header {
   background: rgba(255,255,255,0.05);
   border: 1px solid var(--border);
 }
-.project-card.lightning .project-icon {
-  background: rgba(247, 147, 26, 0.1);
-  border-color: rgba(247, 147, 26, 0.3);
+.project-card.app .project-icon {
+  background: rgba(0, 212, 170, 0.1);
+  border-color: rgba(0, 212, 170, 0.3);
 }
-.project-card.nostr .project-icon {
+.project-card.template .project-icon {
   background: rgba(157, 78, 221, 0.1);
   border-color: rgba(157, 78, 221, 0.3);
 }
-.project-card.podcast .project-icon {
-  background: rgba(0, 212, 170, 0.1);
-  border-color: rgba(0, 212, 170, 0.3);
+.project-card.bot .project-icon {
+  background: rgba(247, 147, 26, 0.1);
+  border-color: rgba(247, 147, 26, 0.3);
+}
+.project-card.bridge .project-icon {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+.project-card.starter .project-icon {
+  background: rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+.project-card.reference .project-icon {
+  background: rgba(234, 179, 8, 0.1);
+  border-color: rgba(234, 179, 8, 0.3);
 }
 
 .project-badge {
@@ -268,13 +286,29 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.project-badge.live {
+.project-badge.app {
   background: rgba(0, 212, 170, 0.15);
   color: var(--podcast);
 }
 .project-badge.template {
   background: rgba(157, 78, 221, 0.15);
   color: var(--nostr);
+}
+.project-badge.bot {
+  background: rgba(247, 147, 26, 0.15);
+  color: var(--lightning);
+}
+.project-badge.bridge {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--blue);
+}
+.project-badge.starter {
+  background: rgba(236, 72, 153, 0.15);
+  color: var(--pink);
+}
+.project-badge.reference {
+  background: rgba(234, 179, 8, 0.15);
+  color: var(--yellow);
 }
 
 .project-title {
