@@ -20,7 +20,7 @@ export interface ProjectSection {
 
 export const projectSections: ProjectSection[] = [
   {
-    title: '// Apps & Platforms',
+    title: '// Apps',
     projects: [
       {
         name: 'StableKraft',
@@ -104,6 +104,11 @@ export const projectSections: ProjectSection[] = [
         tech: ['Nostr', 'PodPing', 'TypeScript'],
         accent: 'nostr',
       },
+    ],
+  },
+  {
+    title: '// Resources',
+    projects: [
       {
         name: 'BoostBot-Starter',
         description: 'Simplified starter for auto-sharing Podcasting 2.0 boosts to Nostr. Quick setup with Helipad webhook integration.',

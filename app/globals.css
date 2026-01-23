@@ -158,6 +158,10 @@ header {
   align-items: center;
   gap: 1rem;
 }
+.section-title .comment-syntax {
+  color: var(--lightning);
+  text-shadow: 0 0 10px var(--glow-lightning);
+}
 .section-title::after {
   content: '';
   flex: 1;

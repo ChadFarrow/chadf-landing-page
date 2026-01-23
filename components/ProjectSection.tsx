@@ -8,7 +8,9 @@ interface ProjectSectionProps {
 export default function ProjectSection({ section }: ProjectSectionProps) {
   return (
     <section>
-      <h2 className="section-title">{section.title}</h2>
+      <h2 className="section-title">
+        <span className="comment-syntax">//</span> {section.title.replace('//', '').trim()}
+      </h2>
       <div className="projects">
         {section.projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
