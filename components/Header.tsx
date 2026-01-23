@@ -11,10 +11,10 @@ export default function Header() {
           <span className="dot lightning" /> Value4Value
         </span>
         <span>
-          <span className="dot nostr" /> Nostr
+          <span className="dot podcast" /> Podcasting 2.0
         </span>
         <span>
-          <span className="dot podcast" /> Podcasting 2.0
+          <span className="dot nostr" /> Nostr
         </span>
       </div>
     </header>
