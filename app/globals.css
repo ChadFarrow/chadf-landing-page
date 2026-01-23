@@ -208,6 +208,32 @@ header {
   margin-bottom: 1rem;
 }
 
+.project-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.github-link {
+  color: var(--text-muted);
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.github-link:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.1);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .project-icon {
   width: 44px;
   height: 44px;
@@ -272,7 +298,7 @@ header {
 
 .project-desc {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: #a0a0b0;
   line-height: 1.6;
   margin-bottom: 1rem;
 }

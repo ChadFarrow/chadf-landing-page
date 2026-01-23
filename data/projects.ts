@@ -5,6 +5,7 @@ export interface Project {
   name: string;
   description: string;
   url: string;
+  github?: string;
   icon: string;
   image?: string;
   badge: BadgeType;
@@ -25,6 +26,7 @@ export const projectSections: ProjectSection[] = [
         name: 'StableKraft',
         description: 'Music discovery & streaming from podcast feeds with V4V Lightning payments, Nostr auth, and curated playlists.',
         url: 'https://stablekraft.app',
+        github: 'https://github.com/ChadFarrow/stablekraft-app',
         icon: '🎵',
         image: '/logos/stablekraft.webp',
         badge: 'live',
@@ -35,6 +37,7 @@ export const projectSections: ProjectSection[] = [
         name: 'ITDV-Lightning',
         description: 'Lightning-powered V4V music platform showcasing DoerfelVerse artists. Auto-boost, boostagrams, and Nostr integration.',
         url: 'https://itdv.podtards.com',
+        github: 'https://github.com/ChadFarrow/ITDV-Lightning',
         icon: '⚡',
         image: '/logos/itdv.jpg',
         badge: 'live',
@@ -45,6 +48,7 @@ export const projectSections: ProjectSection[] = [
         name: 'MSP 2.0',
         description: 'Music Side Project Studio - RSS feed editor for creating Podcasting 2.0 music albums and publisher catalogs with V4V support.',
         url: 'https://msp.podtards.com',
+        github: 'https://github.com/ChadFarrow/MSP-2.0',
         icon: '🎚️',
         image: '/logos/msp.png',
         badge: 'live',
@@ -54,7 +58,8 @@ export const projectSections: ProjectSection[] = [
       {
         name: 'RSS Music Site',
         description: 'GitHub template for V4V music platforms. Deploy your own Lightning-powered music site with one click.',
-        url: 'https://github.com/ChadFarrow/RSS-music-site-template',
+        url: 'https://rss-music-site.vercel.app/',
+        github: 'https://github.com/ChadFarrow/RSS-music-site-template',
         icon: '📦',
         badge: 'template',
         tech: ['Next.js', 'Vercel', 'Template'],
@@ -69,6 +74,7 @@ export const projectSections: ProjectSection[] = [
         name: 'Helipad-to-Nostr',
         description: 'Webhook receiver connecting Helipad payments to Nostr. Auto-posts boosts with daily/weekly summaries and music show support.',
         url: 'https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot',
+        github: 'https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot',
         icon: '🚁',
         badge: 'bot',
         tech: ['TypeScript', 'Helipad', 'Nostr'],
@@ -78,6 +84,7 @@ export const projectSections: ProjectSection[] = [
         name: 'LIT_Bot',
         description: 'Live podcast notifications via PodPing to Nostr. Monitors the podcast ecosystem and broadcasts when shows go live.',
         url: 'https://github.com/ChadFarrow/LIT_Bot',
+        github: 'https://github.com/ChadFarrow/LIT_Bot',
         icon: '📡',
         badge: 'bot',
         tech: ['Nostr', 'PodPing', 'TypeScript'],
@@ -87,6 +94,7 @@ export const projectSections: ProjectSection[] = [
         name: 'LibreRelayBot',
         description: 'IRC-to-Nostr bridge for #SirLibre channel. Monitors and forwards messages in real-time.',
         url: 'https://github.com/ChadFarrow/LibreRelayBot',
+        github: 'https://github.com/ChadFarrow/LibreRelayBot',
         icon: '🔗',
         badge: 'bridge',
         tech: ['Node.js', 'IRC', 'Nostr'],
@@ -96,6 +104,7 @@ export const projectSections: ProjectSection[] = [
         name: 'BoostAfterBoost',
         description: 'IRC-to-Nostr bridge for #BowlAfterBowl channel. Real-time message forwarding to Nostr relays.',
         url: 'https://github.com/ChadFarrow/BoostAfterBoost',
+        github: 'https://github.com/ChadFarrow/BoostAfterBoost',
         icon: '🔗',
         badge: 'bridge',
         tech: ['Node.js', 'IRC', 'Nostr'],
@@ -105,6 +114,7 @@ export const projectSections: ProjectSection[] = [
         name: 'BoostBot-Starter',
         description: 'Simplified starter for auto-sharing Podcasting 2.0 boosts to Nostr. Quick setup with Helipad webhook integration.',
         url: 'https://github.com/ChadFarrow/BoostBot-Starter',
+        github: 'https://github.com/ChadFarrow/BoostBot-Starter',
         icon: '🚀',
         badge: 'starter',
         tech: ['Node.js', 'Helipad', 'Nostr'],
