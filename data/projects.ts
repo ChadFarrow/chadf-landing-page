@@ -1,0 +1,115 @@
+export type AccentColor = 'lightning' | 'nostr' | 'podcast';
+export type BadgeType = 'live' | 'template' | 'bot' | 'bridge' | 'starter';
+
+export interface Project {
+  name: string;
+  description: string;
+  url: string;
+  icon: string;
+  image?: string;
+  badge: BadgeType;
+  tech: string[];
+  accent: AccentColor;
+}
+
+export interface ProjectSection {
+  title: string;
+  projects: Project[];
+}
+
+export const projectSections: ProjectSection[] = [
+  {
+    title: '// Apps & Platforms',
+    projects: [
+      {
+        name: 'StableKraft',
+        description: 'Music discovery & streaming from podcast feeds with V4V Lightning payments, Nostr auth, and curated playlists.',
+        url: 'https://stablekraft.app',
+        icon: '🎵',
+        image: '/logos/stablekraft.webp',
+        badge: 'live',
+        tech: ['Next.js', 'Nostr', 'Lightning', 'PWA'],
+        accent: 'podcast',
+      },
+      {
+        name: 'ITDV-Lightning',
+        description: 'Lightning-powered V4V music platform showcasing DoerfelVerse artists. Auto-boost, boostagrams, and Nostr integration.',
+        url: 'https://itdv.podtards.com',
+        icon: '⚡',
+        image: '/logos/itdv.jpg',
+        badge: 'live',
+        tech: ['Next.js', 'Bitcoin Connect', 'WebLN'],
+        accent: 'lightning',
+      },
+      {
+        name: 'MSP 2.0',
+        description: 'Music Side Project Studio - RSS feed editor for creating Podcasting 2.0 music albums and publisher catalogs with V4V support.',
+        url: 'https://msp.podtards.com',
+        icon: '🎚️',
+        image: '/logos/msp.png',
+        badge: 'live',
+        tech: ['React', 'Nostr', 'RSS'],
+        accent: 'podcast',
+      },
+      {
+        name: 'RSS Music Site',
+        description: 'GitHub template for V4V music platforms. Deploy your own Lightning-powered music site with one click.',
+        url: 'https://github.com/ChadFarrow/RSS-music-site-template',
+        icon: '📦',
+        badge: 'template',
+        tech: ['Next.js', 'Vercel', 'Template'],
+        accent: 'nostr',
+      },
+    ],
+  },
+  {
+    title: '// Bots & Bridges',
+    projects: [
+      {
+        name: 'Helipad-to-Nostr',
+        description: 'Webhook receiver connecting Helipad payments to Nostr. Auto-posts boosts with daily/weekly summaries and music show support.',
+        url: 'https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot',
+        icon: '🚁',
+        badge: 'bot',
+        tech: ['TypeScript', 'Helipad', 'Nostr'],
+        accent: 'lightning',
+      },
+      {
+        name: 'LIT_Bot',
+        description: 'Live podcast notifications via PodPing to Nostr. Monitors the podcast ecosystem and broadcasts when shows go live.',
+        url: 'https://github.com/ChadFarrow/LIT_Bot',
+        icon: '📡',
+        badge: 'bot',
+        tech: ['Nostr', 'PodPing', 'TypeScript'],
+        accent: 'nostr',
+      },
+      {
+        name: 'LibreRelayBot',
+        description: 'IRC-to-Nostr bridge for #SirLibre channel. Monitors and forwards messages in real-time.',
+        url: 'https://github.com/ChadFarrow/LibreRelayBot',
+        icon: '🔗',
+        badge: 'bridge',
+        tech: ['Node.js', 'IRC', 'Nostr'],
+        accent: 'nostr',
+      },
+      {
+        name: 'BoostAfterBoost',
+        description: 'IRC-to-Nostr bridge for #BowlAfterBowl channel. Real-time message forwarding to Nostr relays.',
+        url: 'https://github.com/ChadFarrow/BoostAfterBoost',
+        icon: '🔗',
+        badge: 'bridge',
+        tech: ['Node.js', 'IRC', 'Nostr'],
+        accent: 'nostr',
+      },
+      {
+        name: 'BoostBot-Starter',
+        description: 'Simplified starter for auto-sharing Podcasting 2.0 boosts to Nostr. Quick setup with Helipad webhook integration.',
+        url: 'https://github.com/ChadFarrow/BoostBot-Starter',
+        icon: '🚀',
+        badge: 'starter',
+        tech: ['Node.js', 'Helipad', 'Nostr'],
+        accent: 'podcast',
+      },
+    ],
+  },
+];
