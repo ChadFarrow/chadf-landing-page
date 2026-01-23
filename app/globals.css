@@ -149,10 +149,10 @@ header {
 /* Section titles */
 .section-title {
   font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--text-muted);
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
