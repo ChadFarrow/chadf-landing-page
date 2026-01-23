@@ -22,12 +22,18 @@
   box-sizing: border-box;
 }
 
+html {
+  background: var(--bg-deep);
+  overscroll-behavior: none;
+}
+
 body {
   font-family: var(--font-outfit), 'Outfit', sans-serif;
   background: var(--bg-deep);
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 /* Grid background */
