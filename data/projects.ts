@@ -1,5 +1,5 @@
 export type AccentColor = 'lightning' | 'nostr' | 'podcast';
-export type BadgeType = 'live' | 'template' | 'bot' | 'bridge' | 'starter';
+export type BadgeType = 'live' | 'template' | 'bot' | 'bridge' | 'starter' | 'reference';
 
 export interface Project {
   name: string;
@@ -8,7 +8,7 @@ export interface Project {
   github?: string;
   icon: string;
   image?: string;
-  badge: BadgeType;
+  badge?: BadgeType;
   tech: string[];
   accent: AccentColor;
 }
@@ -54,26 +54,6 @@ export const projectSections: ProjectSection[] = [
         badge: 'live',
         tech: ['React', 'Nostr', 'RSS'],
         accent: 'podcast',
-      },
-      {
-        name: 'RSS Music Site',
-        description: 'GitHub template for V4V music platforms. Deploy your own Lightning-powered music site with one click.',
-        url: 'https://rss-music-site.vercel.app/',
-        github: 'https://github.com/ChadFarrow/RSS-music-site-template',
-        icon: '📦',
-        badge: 'template',
-        tech: ['Next.js', 'Vercel', 'Template'],
-        accent: 'nostr',
-      },
-      {
-        name: 'MusicL Playlists',
-        description: 'Self-hosted MusicL playlist using Podcasting 2.0 music medium tags. Static documentation and playlist assets.',
-        url: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
-        github: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
-        icon: '🎶',
-        badge: 'template',
-        tech: ['Podcasting 2.0', 'MusicL'],
-        accent: 'lightning',
       },
     ],
   },
@@ -133,6 +113,26 @@ export const projectSections: ProjectSection[] = [
         badge: 'starter',
         tech: ['Node.js', 'Helipad', 'Nostr'],
         accent: 'podcast',
+      },
+      {
+        name: 'RSS Music Site',
+        description: 'GitHub template for V4V music platforms. Deploy your own Lightning-powered music site with one click.',
+        url: 'https://rss-music-site.vercel.app/',
+        github: 'https://github.com/ChadFarrow/RSS-music-site-template',
+        icon: '📦',
+        badge: 'template',
+        tech: ['Next.js', 'Vercel', 'Template'],
+        accent: 'nostr',
+      },
+      {
+        name: 'MusicL Playlists',
+        description: 'Self-hosted MusicL playlist using Podcasting 2.0 music medium tags. Static documentation and playlist assets.',
+        url: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
+        github: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
+        icon: '🎶',
+        badge: 'reference',
+        tech: ['Podcasting 2.0', 'MusicL'],
+        accent: 'lightning',
       },
     ],
   },

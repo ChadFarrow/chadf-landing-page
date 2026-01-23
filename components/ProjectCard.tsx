@@ -47,9 +47,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <GitHubIcon />
             </a>
           )}
-          <span className={`project-badge ${badgeClass}`}>
-            {project.badge}
-          </span>
+          {project.badge && (
+            <span className={`project-badge ${badgeClass}`}>
+              {project.badge}
+            </span>
+          )}
         </div>
       </div>
       <a
