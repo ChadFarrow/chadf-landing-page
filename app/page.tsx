@@ -1,6 +1,7 @@
 import Background from '@/components/Background';
 import Header from '@/components/Header';
 import ProjectSection from '@/components/ProjectSection';
+import PodcastSection from '@/components/PodcastSection';
 import SocialLinks from '@/components/SocialLinks';
 import Footer from '@/components/Footer';
 import { projectSections } from '@/data/projects';
@@ -14,6 +15,7 @@ export default function Home() {
         {projectSections.map((section) => (
           <ProjectSection key={section.title} section={section} />
         ))}
+        <PodcastSection />
         <SocialLinks />
         <Footer />
       </div>
