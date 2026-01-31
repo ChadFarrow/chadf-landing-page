@@ -22,6 +22,11 @@ export const guestAppearances: PodcastAppearance[] = [
     url: 'https://pod.link/1491067458/episode/NGVkYWI3ZDQtMDNlOC00MWMwLWJmODMtNTdjMjI5OWQ3NDQ1',
   },
   {
+    showName: 'Podcasting 2.0',
+    episode: 'Open Source=People!',
+    url: 'https://pod.link/podcasting2.0/episode/UEMyMC0yNDA?view=apps&sort=popularity',
+  },
+  {
     showName: 'Value for Value Roundtable',
     episode: 'Episode 3',
     url: 'https://pod.link/aHR0cHM6Ly9tdXNpYy5qaW1teXY0di5jb20vcG9kY2FzdHMvdjR2LXJvdW5kdGFibGUvdjR2cm91bmR0YWJsZS1yc3MueG1s/episode/N2M0MWViMjQtZGQzMC00YzQwLTk1NTgtNDcxODAwMDIxOWRh',
