@@ -130,6 +130,16 @@ export const projectSections: ProjectSection[] = [
         accent: 'nostr',
       },
       {
+        name: 'TardBox',
+        description: 'Webpage for BoostBox, a self-hosted API for preserving Podcasting 2.0 boostagram metadata through Lightning Network payments.',
+        url: 'https://tardbox.com',
+        github: 'https://github.com/ChadFarrow/boostbox',
+        icon: '📡',
+        badge: 'reference',
+        tech: ['Podcasting 2.0', 'Lightning', 'V4V'],
+        accent: 'lightning',
+      },
+      {
         name: 'MusicL Playlists',
         description: 'Self-hosted MusicL playlist using Podcasting 2.0 music medium tags. Static documentation and playlist assets.',
         url: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
