@@ -55,6 +55,17 @@ export const projectSections: ProjectSection[] = [
         tech: ['React', 'Nostr', 'RSS'],
         accent: 'podcast',
       },
+      {
+        name: 'BoostMeBitch',
+        description: 'Podcast boost station for Podcasting 2.0 shows. Search, listen, and boost over Lightning with Nostr sign-in, value splits, and boost notes.',
+        url: 'https://boostmebitch.com',
+        github: 'https://github.com/ChadFarrow/boostmebitch',
+        icon: '🎙️',
+        image: '/logos/boostmebitch.svg',
+        badge: 'app',
+        tech: ['Next.js', 'Nostr', 'Lightning', 'NWC'],
+        accent: 'lightning',
+      },
     ],
   },
   {
