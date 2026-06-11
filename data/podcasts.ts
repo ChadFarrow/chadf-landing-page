@@ -36,4 +36,9 @@ export const guestAppearances: PodcastAppearance[] = [
     episode: 'Episode 344',
     url: 'https://pod.link/1603997338/episode/Ym93bGFmdGVyYm93bC5wb2RiZWFuLmNvbS82MTFkNDBmZi1mMTgwLTMxNzItYjY0My1mM2ViZGU3M2I0NDg',
   },
+  {
+    showName: 'Homegrown Hits',
+    episode: 'Episode 111',
+    url: 'https://pod.link/aHR0cHM6Ly9mZWVkLmhvbWVncm93bmhpdHMueHl6L2ZlZWQueG1s/episode/NDA3NWFmZjAtM2FmMi00ZmM3LWFhYzAtODAwZWQ5MjJmODMx',
+  },
 ];
