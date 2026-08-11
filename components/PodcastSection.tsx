@@ -1,4 +1,4 @@
-import { coHostShow, guestAppearances, PodcastAppearance } from '@/data/podcasts';
+import { coHostShows, guestAppearances, PodcastAppearance } from '@/data/podcasts';
 
 function PodcastCard({ podcast }: { podcast: PodcastAppearance }) {
   return (
@@ -15,8 +15,10 @@ export default function PodcastSection() {
       <h2 className="section-title">// Podcasts</h2>
 
       <h3 className="podcast-subsection-title">Co-Host</h3>
-      <div className="podcasts-grid podcasts-grid-single">
-        <PodcastCard podcast={coHostShow} />
+      <div className={`podcasts-grid${coHostShows.length === 1 ? ' podcasts-grid-single' : ''}`}>
+        {coHostShows.map((podcast) => (
+          <PodcastCard key={podcast.url} podcast={podcast} />
+        ))}
       </div>
 
       <h3 className="podcast-subsection-title">Guest Appearances</h3>

@@ -4,11 +4,13 @@ export interface PodcastAppearance {
   url: string;
 }
 
-export const coHostShow: PodcastAppearance = {
-  showName: 'Into The Doerfel-Verse',
-  episode: 'Co-Host',
-  url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
-};
+export const coHostShows: PodcastAppearance[] = [
+  {
+    showName: 'Into The Doerfel-Verse',
+    episode: 'Co-Host',
+    url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
+  },
+];
 
 export const guestAppearances: PodcastAppearance[] = [
   {
