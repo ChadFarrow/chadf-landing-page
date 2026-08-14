@@ -6,14 +6,14 @@ export interface PodcastAppearance {
 
 export const coHostShows: PodcastAppearance[] = [
   {
-    showName: 'Into The Doerfel-Verse',
-    episode: 'Co-Host',
-    url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
-  },
-  {
     showName: 'Chad and Reeds Podcast',
     episode: 'Co-Host',
     url: 'https://pod.link/aHR0cHM6Ly9zZXJ2ZS5wb2Rob21lLmZtL3Jzcy83YzZmNzg3NS0yYjczLTQ5MWUtYjMyYy1lMmM4ZDZlOTFkNTM',
+  },
+  {
+    showName: 'Into The Doerfel-Verse',
+    episode: 'Co-Host',
+    url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
   },
 ];
 
