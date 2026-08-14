@@ -17,7 +17,7 @@ export interface ProjectSection {
 
 export const projectSections: ProjectSection[] = [
   {
-    title: '// Apps',
+    title: 'Apps',
     projects: [
       {
         name: 'StableKraft',
@@ -58,7 +58,7 @@ export const projectSections: ProjectSection[] = [
     ],
   },
   {
-    title: '// Bots & Bridges',
+    title: 'Bots & Bridges',
     projects: [
       {
         name: 'Helipad-to-Nostr',
@@ -99,7 +99,7 @@ export const projectSections: ProjectSection[] = [
     ],
   },
   {
-    title: '// Resources',
+    title: 'Resources',
     projects: [
       {
         name: 'BoostBot-Starter',

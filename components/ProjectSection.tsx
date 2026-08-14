@@ -1,5 +1,6 @@
 import { ProjectSection as ProjectSectionType } from '@/data/projects';
 import ProjectCard from './ProjectCard';
+import SectionTitle from './SectionTitle';
 
 interface ProjectSectionProps {
   section: ProjectSectionType;
@@ -8,9 +9,7 @@ interface ProjectSectionProps {
 export default function ProjectSection({ section }: ProjectSectionProps) {
   return (
     <section>
-      <h2 className="section-title">
-        <span className="comment-syntax">//</span> {section.title.replace('//', '').trim()}
-      </h2>
+      <SectionTitle>{section.title}</SectionTitle>
       <div className="projects">
         {section.projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

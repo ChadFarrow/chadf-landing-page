@@ -1,4 +1,5 @@
 import { coHostShows, guestAppearances, PodcastAppearance } from '@/data/podcasts';
+import SectionTitle from './SectionTitle';
 
 function PodcastCard({ podcast }: { podcast: PodcastAppearance }) {
   return (
@@ -9,24 +10,27 @@ function PodcastCard({ podcast }: { podcast: PodcastAppearance }) {
   );
 }
 
+// A lone card in a full-width auto-fill grid stretches oddly, so a
+// one-entry list gets the narrower single-column treatment.
+function PodcastSubsection({ title, podcasts }: { title: string; podcasts: PodcastAppearance[] }) {
+  return (
+    <>
+      <h3 className="podcast-subsection-title">{title}</h3>
+      <div className={`podcasts-grid${podcasts.length === 1 ? ' podcasts-grid-single' : ''}`}>
+        {podcasts.map((podcast) => (
+          <PodcastCard key={podcast.url} podcast={podcast} />
+        ))}
+      </div>
+    </>
+  );
+}
+
 export default function PodcastSection() {
   return (
     <section className="podcast-section">
-      <h2 className="section-title">// Podcasts</h2>
-
-      <h3 className="podcast-subsection-title">Co-Host</h3>
-      <div className={`podcasts-grid${coHostShows.length === 1 ? ' podcasts-grid-single' : ''}`}>
-        {coHostShows.map((podcast) => (
-          <PodcastCard key={podcast.url} podcast={podcast} />
-        ))}
-      </div>
-
-      <h3 className="podcast-subsection-title">Guest Appearances</h3>
-      <div className="podcasts-grid">
-        {guestAppearances.map((podcast) => (
-          <PodcastCard key={podcast.url} podcast={podcast} />
-        ))}
-      </div>
+      <SectionTitle>Podcasts</SectionTitle>
+      <PodcastSubsection title="Co-Host" podcasts={coHostShows} />
+      <PodcastSubsection title="Guest Appearances" podcasts={guestAppearances} />
     </section>
   );
 }

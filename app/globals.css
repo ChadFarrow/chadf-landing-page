@@ -347,53 +347,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Music section */
-.music-section {
-  background: linear-gradient(135deg, rgba(247, 147, 26, 0.05), rgba(157, 78, 221, 0.05));
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-  margin-bottom: 4rem;
-  position: relative;
-  overflow: hidden;
-}
-.music-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--lightning), var(--nostr), var(--podcast));
-}
-
-.music-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.music-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.music-stats {
-  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-.music-stats strong {
-  color: var(--lightning);
-}
-
-.music-desc {
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 600px;
-}
-
 /* Links section */
 .links {
   display: flex;
@@ -469,7 +422,6 @@ header { animation: fadeInUp 0.6s ease; }
 .project-card:nth-child(7) { animation: fadeInUp 0.6s ease 0.4s both; }
 .project-card:nth-child(8) { animation: fadeInUp 0.6s ease 0.45s both; }
 .project-card:nth-child(9) { animation: fadeInUp 0.6s ease 0.5s both; }
-.music-section { animation: fadeInUp 0.6s ease 0.55s both; }
 
 /* Podcast section */
 .podcast-section {
@@ -556,7 +508,6 @@ header { animation: fadeInUp 0.6s ease; }
   .container { padding: 1rem; }
   header { padding: 2rem 0; }
   .projects { grid-template-columns: 1fr; }
-  .music-section { padding: 1.5rem; }
   .podcasts-grid { grid-template-columns: 1fr; }
   .podcasts-grid-single { grid-template-columns: 1fr; }
 }
