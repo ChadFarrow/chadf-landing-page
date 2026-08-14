@@ -347,21 +347,6 @@ header {
   margin-bottom: 1rem;
 }
 
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.tech-tag {
-  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  padding: 0.3rem 0.6rem;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text-muted);
-}
-
 /* Music section */
 .music-section {
   background: linear-gradient(135deg, rgba(247, 147, 26, 0.05), rgba(157, 78, 221, 0.05));

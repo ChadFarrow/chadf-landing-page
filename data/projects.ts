@@ -1,4 +1,3 @@
-export type AccentColor = 'lightning' | 'nostr' | 'podcast';
 export type BadgeType = 'app' | 'template' | 'bot' | 'bridge' | 'starter' | 'reference';
 
 export interface Project {
@@ -9,8 +8,6 @@ export interface Project {
   icon: string;
   image?: string;
   badge?: BadgeType;
-  tech: string[];
-  accent: AccentColor;
 }
 
 export interface ProjectSection {
@@ -30,8 +27,6 @@ export const projectSections: ProjectSection[] = [
         icon: '🎵',
         image: '/logos/stablekraft.webp',
         badge: 'app',
-        tech: ['Next.js', 'Nostr', 'Lightning', 'PWA'],
-        accent: 'podcast',
       },
       {
         name: 'ITDV-Lightning',
@@ -41,8 +36,6 @@ export const projectSections: ProjectSection[] = [
         icon: '⚡',
         image: '/logos/itdv.jpg',
         badge: 'app',
-        tech: ['Next.js', 'Bitcoin Connect', 'WebLN'],
-        accent: 'lightning',
       },
       {
         name: 'MSP 2.0',
@@ -52,8 +45,6 @@ export const projectSections: ProjectSection[] = [
         icon: '🎚️',
         image: '/logos/msp.png',
         badge: 'app',
-        tech: ['React', 'Nostr', 'RSS'],
-        accent: 'podcast',
       },
       {
         name: 'BoostMeBitch',
@@ -63,8 +54,6 @@ export const projectSections: ProjectSection[] = [
         icon: '🎙️',
         image: '/logos/boostmebitch.svg',
         badge: 'app',
-        tech: ['Next.js', 'Nostr', 'Lightning', 'NWC'],
-        accent: 'lightning',
       },
     ],
   },
@@ -79,8 +68,6 @@ export const projectSections: ProjectSection[] = [
         icon: '🚁',
         image: '/logos/helipad.jpg',
         badge: 'bridge',
-        tech: ['TypeScript', 'Helipad', 'Nostr'],
-        accent: 'lightning',
       },
       {
         name: 'LibreRelayBot',
@@ -90,8 +77,6 @@ export const projectSections: ProjectSection[] = [
         icon: '🔗',
         image: '/logos/libre.jpg',
         badge: 'bridge',
-        tech: ['Node.js', 'IRC', 'Nostr'],
-        accent: 'nostr',
       },
       {
         name: 'BoostAfterBoost',
@@ -101,8 +86,6 @@ export const projectSections: ProjectSection[] = [
         icon: '🔗',
         image: '/logos/boostafterboost.jpg',
         badge: 'bridge',
-        tech: ['Node.js', 'IRC', 'Nostr'],
-        accent: 'nostr',
       },
       {
         name: 'LIT_Bot',
@@ -112,8 +95,6 @@ export const projectSections: ProjectSection[] = [
         icon: '📡',
         image: '/logos/litbot.png',
         badge: 'bot',
-        tech: ['Nostr', 'PodPing', 'TypeScript'],
-        accent: 'nostr',
       },
     ],
   },
@@ -127,8 +108,6 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/BoostBot-Starter',
         icon: '🚀',
         badge: 'starter',
-        tech: ['Node.js', 'Helipad', 'Nostr'],
-        accent: 'podcast',
       },
       {
         name: 'RSS Music Site',
@@ -137,8 +116,6 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/RSS-music-site-template',
         icon: '📦',
         badge: 'template',
-        tech: ['Next.js', 'Vercel', 'Template'],
-        accent: 'nostr',
       },
       {
         name: 'TardBox',
@@ -147,8 +124,6 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/boostbox',
         icon: '📡',
         badge: 'reference',
-        tech: ['Podcasting 2.0', 'Lightning', 'V4V'],
-        accent: 'lightning',
       },
       {
         name: 'MusicL Playlists',
@@ -157,8 +132,6 @@ export const projectSections: ProjectSection[] = [
         github: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
         icon: '📝',
         badge: 'reference',
-        tech: ['Podcasting 2.0', 'MusicL'],
-        accent: 'lightning',
       },
     ],
   },
