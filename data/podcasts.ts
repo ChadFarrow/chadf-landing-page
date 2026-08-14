@@ -4,11 +4,18 @@ export interface PodcastAppearance {
   url: string;
 }
 
-export const coHostShow: PodcastAppearance = {
-  showName: 'Into The Doerfel-Verse',
-  episode: 'Co-Host',
-  url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
-};
+export const coHostShows: PodcastAppearance[] = [
+  {
+    showName: 'Into The Doerfel-Verse',
+    episode: 'Co-Host',
+    url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
+  },
+  {
+    showName: 'Chad and Reeds Podcast',
+    episode: 'Co-Host',
+    url: 'https://pod.link/aHR0cHM6Ly9zZXJ2ZS5wb2Rob21lLmZtL3Jzcy83YzZmNzg3NS0yYjczLTQ5MWUtYjMyYy1lMmM4ZDZlOTFkNTM',
+  },
+];
 
 export const guestAppearances: PodcastAppearance[] = [
   {
@@ -40,5 +47,10 @@ export const guestAppearances: PodcastAppearance[] = [
     showName: 'Homegrown Hits',
     episode: 'Episode 111',
     url: 'https://pod.link/aHR0cHM6Ly9mZWVkLmhvbWVncm93bmhpdHMueHl6L2ZlZWQueG1s/episode/NDA3NWFmZjAtM2FmMi00ZmM3LWFhYzAtODAwZWQ5MjJmODMx',
+  },
+  {
+    showName: 'Rollz Radio',
+    episode: 'How Music Side Project Helps Musicians Self-Host, Own Their Data & Join the V4V Movement',
+    url: 'https://pod.link/aHR0cHM6Ly9hbmNob3IuZm0vcy8xMTJlNjJiODAvcG9kY2FzdC9yc3M/episode/YWI2Y2ZlMGEtNDMxMS00NTY5LTg1ZTAtZWFmZjliMTFlNWVh',
   },
 ];
