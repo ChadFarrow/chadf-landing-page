@@ -34,12 +34,7 @@ Content is data, presentation is components. Everything the page says lives in `
 components render whatever is there and rarely need touching. `app/page.tsx` composes the
 sections in order.
 
-**`Project.accent` and `Project.tech` are dead fields.** Both are declared on the `Project`
-interface and set on all 12 projects, but no component reads either one — `tech` tags were
-removed from the cards, and `.project-tech` / `.tech-tag` remain in the CSS as orphans.
-Changing `accent` on a project has no visible effect.
-
-**A card's color comes from `badge`, not `accent`.** `ProjectCard` puts `project.badge`
+**A card's color comes from `badge`.** `ProjectCard` puts `project.badge`
 directly into the card's className, and `app/globals.css` keys the `--accent-color` custom
 property off that class (`.project-card.bot { --accent-color: var(--lightning); }`). So the
 six `BadgeType` values in `data/projects.ts` must stay in sync with the six
