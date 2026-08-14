@@ -1,19 +1,53 @@
 # CLAUDE.md
 
-Personal landing page for ChadF — https://github.com/ChadFarrow/chadf-landing-page
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Next.js 16.1.4 (App Router, Turbopack), React 19.2.3, TypeScript, plain CSS. No Tailwind,
-no test suite. Deployed on Vercel; pushing to `main` deploys.
+Personal landing page for ChadF. Next.js 16.1.4 (App Router, Turbopack), React 19.2.3,
+TypeScript, plain CSS. No Tailwind. Deployed on Vercel; pushing to `main` deploys.
 
-## Layout
+## Commands
 
-Content is data, presentation is components. To add or change what the page says, edit
-`data/` — the components render whatever is there and rarely need touching.
+```bash
+npm run dev      # dev server on :3000
+npm run build    # production build — runs the TypeScript check and prerenders
+npm run lint     # eslint (see caveat below)
+```
 
-- `data/projects.ts` — `projectSections[]`, each with a title and `Project[]`. Logos live in
-  `public/logos/`.
-- `data/podcasts.ts` — `coHostShows[]` and `guestAppearances[]`.
-- `app/page.tsx` composes the sections; `app/globals.css` holds every style (~580 lines).
+There is no test suite. `npm run build` is the real verification: it type-checks and
+statically prerenders the whole page, so a bad data edit fails here.
+
+To confirm content actually rendered, grep the prerendered output rather than trusting the
+source edit:
+
+```bash
+npm run build && grep -o "Show Name" .next/server/app/index.html
+```
+
+`npm run lint` reports 2 pre-existing `react/jsx-no-comment-textnodes` errors, from the
+literal `//` in the section titles of `PodcastSection.tsx` and `ProjectSection.tsx`. They are
+not blocking — `next build` does not run lint — so don't read them as regressions from your
+change.
+
+## Architecture
+
+Content is data, presentation is components. Everything the page says lives in `data/`; the
+components render whatever is there and rarely need touching. `app/page.tsx` composes the
+sections in order.
+
+**`Project.accent` and `Project.tech` are dead fields.** Both are declared on the `Project`
+interface and set on all 12 projects, but no component reads either one — `tech` tags were
+removed from the cards, and `.project-tech` / `.tech-tag` remain in the CSS as orphans.
+Changing `accent` on a project has no visible effect.
+
+**A card's color comes from `badge`, not `accent`.** `ProjectCard` puts `project.badge`
+directly into the card's className, and `app/globals.css` keys the `--accent-color` custom
+property off that class (`.project-card.bot { --accent-color: var(--lightning); }`). So the
+six `BadgeType` values in `data/projects.ts` must stay in sync with the six
+`.project-card.*` rules in the CSS — adding a badge type without a matching CSS rule yields
+an uncolored card, and TypeScript won't catch it.
+
+`app/globals.css` (~580 lines) holds every style, including a small token palette at the top
+(`--lightning`, `--nostr`, `--podcast` plus matching `--glow-*`).
 
 ## Podcast entries
 
@@ -27,7 +61,7 @@ Co-host order is manual and intentional (Chad and Reeds Podcast first).
 ### pod.link URLs
 
 Links use pod.link, which addresses a show three different ways. Existing entries use all
-three, so match whichever the show already uses:
+three, so match whichever form the show already uses:
 
 - Unpadded base64 of the feed URL — `pod.link/aHR0cHM6Ly9zZXJ2ZS5wb2Rob21lLmZt...`
 - Apple Podcasts numeric ID — `pod.link/1691033484`
@@ -38,7 +72,7 @@ A specific episode appends `/episode/<unpadded base64 of the episode guid>`.
 ### Looking up a show or episode
 
 pod.link blocks automated fetches — curl gets HTTP 429 and WebFetch gets 403, both landing on
-a Vercel bot checkpoint. Don't try to read titles from a pod.link page; go to the source:
+a Vercel bot checkpoint. Don't try to read titles off a pod.link page; go to the source:
 
 1. Fetch the show's RSS feed directly and read `<title>` / `<pubDate>` from the matching
    `<item>`.
@@ -47,18 +81,3 @@ a Vercel bot checkpoint. Don't try to read titles from a pod.link page; go to th
 
 Constructed pod.link URLs therefore can't be verified from the CLI. Say so when adding one —
 they need a click on the deployed site.
-
-## Verifying a change
-
-`npm run build` is the real check; it runs the TypeScript check and prerenders the page.
-To confirm content actually rendered, grep the build output rather than trusting the source:
-
-```
-npm run build && grep -o "Show Name" .next/server/app/index.html
-```
-
-`npx eslint .` reports 2 pre-existing `react/jsx-no-comment-textnodes` errors, from the
-literal `//` in the section titles of `PodcastSection.tsx` and `ProjectSection.tsx`. They are
-not blocking — `next build` does not run lint — so don't treat them as regressions from your
-change. `ProjectSection` wraps the `//` in a `.comment-syntax` span; `PodcastSection`
-hardcodes `// Podcasts` in the JSX.
