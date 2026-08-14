@@ -23,10 +23,8 @@ source edit:
 npm run build && grep -o "Show Name" .next/server/app/index.html
 ```
 
-`npm run lint` reports 2 pre-existing `react/jsx-no-comment-textnodes` errors, from the
-literal `//` in the section titles of `PodcastSection.tsx` and `ProjectSection.tsx`. They are
-not blocking — `next build` does not run lint — so don't read them as regressions from your
-change.
+`npm run lint` is clean. Note that `next build` does not run lint, so a lint regression will
+not fail the build — run it separately.
 
 ## Architecture
 
@@ -41,7 +39,11 @@ six `BadgeType` values in `data/projects.ts` must stay in sync with the six
 `.project-card.*` rules in the CSS — adding a badge type without a matching CSS rule yields
 an uncolored card, and TypeScript won't catch it.
 
-`app/globals.css` (~580 lines) holds every style, including a small token palette at the top
+**Section headings go through `SectionTitle`.** It owns the accented `//` prefix, so titles
+in `data/projects.ts` are plain names (`'Apps'`, not `'// Apps'`). The literal must stay
+written as `{'//'}` — a bare `//` in JSX trips `react/jsx-no-comment-textnodes`.
+
+`app/globals.css` (~530 lines) holds every style, including a small token palette at the top
 (`--lightning`, `--nostr`, `--podcast` plus matching `--glow-*`).
 
 ## Podcast entries
