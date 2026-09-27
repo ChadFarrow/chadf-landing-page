@@ -15,7 +15,7 @@ export const coHostShows: PodcastAppearance[] = [
   {
     showName: 'Into The Doerfel-Verse',
     episode: 'Co-Host',
-    url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
+    url: 'https://www.doerfelverse.com/',
   },
 ];
 
