@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   url: string;
   github?: string;
+  zapstore?: string;
   icon: string;
   image?: string;
   badge?: BadgeType;
@@ -24,6 +25,7 @@ export const projectSections: ProjectSection[] = [
         description: 'Music discovery & streaming from podcast feeds with V4V Lightning payments, Nostr auth, and curated playlists.',
         url: 'https://stablekraft.app',
         github: 'https://github.com/ChadFarrow/stablekraft-app',
+        zapstore: 'https://zapstore.dev/apps/app.stablekraft',
         icon: '🎵',
         image: '/logos/stablekraft.webp',
         badge: 'app',
@@ -51,6 +53,7 @@ export const projectSections: ProjectSection[] = [
         description: 'Podcast boost station for Podcasting 2.0 shows. Search, listen, and boost over Lightning with Nostr sign-in, value splits, and boost notes.',
         url: 'https://boostmebitch.com',
         github: 'https://github.com/ChadFarrow/boostmebitch',
+        zapstore: 'https://zapstore.dev/apps/com.boostmebuddy',
         icon: '🎙️',
         image: '/logos/boostmebitch.svg',
         badge: 'app',
@@ -131,6 +134,14 @@ export const projectSections: ProjectSection[] = [
         url: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
         github: 'https://github.com/ChadFarrow/chadf-musicl-playlists',
         icon: '📝',
+        badge: 'reference',
+      },
+      {
+        name: 'PC 2.0 Wiki',
+        description: 'Public reference for Podcasting 2.0: the namespace, the payments, and the plumbing underneath. Built note by note from an Obsidian vault.',
+        url: 'https://pc20-wiki.vercel.app',
+        github: 'https://github.com/ChadFarrow/pc20-wiki',
+        icon: '📚',
         badge: 'reference',
       },
     ],
