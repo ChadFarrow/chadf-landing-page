@@ -10,7 +10,7 @@ export const coHostShows: PodcastAppearance[] = [
   {
     showName: 'Chad and Reeds Podcast',
     episode: 'Co-Host',
-    url: 'https://pod.link/aHR0cHM6Ly9zZXJ2ZS5wb2Rob21lLmZtL3Jzcy83YzZmNzg3NS0yYjczLTQ5MWUtYjMyYy1lMmM4ZDZlOTFkNTM',
+    url: 'https://candr.space',
   },
   {
     showName: 'Into The Doerfel-Verse',
