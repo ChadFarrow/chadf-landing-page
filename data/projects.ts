@@ -58,6 +58,15 @@ export const projectSections: ProjectSection[] = [
         image: '/logos/boostmebitch.svg',
         badge: 'app',
       },
+      {
+        name: 'Square My Art',
+        description: 'Turn any screenshot or picture into square podcast chapter and episode art. Blurred, solid-color or cropped fill, all in the browser.',
+        url: 'https://square-my-art.vercel.app',
+        github: 'https://github.com/ChadFarrow/square-my-art',
+        icon: '🖼️',
+        image: '/logos/square-my-art.png',
+        badge: 'app',
+      },
     ],
   },
   {
