@@ -23,6 +23,12 @@ export const coHostShows: PodcastAppearance[] = [
 // can be added anywhere in this array as long as it carries a `date`.
 export const guestAppearances: PodcastAppearance[] = [
   {
+    showName: 'Homegrown Hits',
+    episode: 'Episode 156',
+    url: 'https://pod.link/aHR0cHM6Ly9mZWVkLmhvbWVncm93bmhpdHMueHl6L2ZlZWQueG1s/episode/MjczNDRjODItZThjZS00MDIyLWFlYTMtN2I2ZTk2YjBlMzZj',
+    date: '2026-10-30',
+  },
+  {
     showName: 'Rollz Radio',
     episode: 'How Music Side Project Helps Musicians Self-Host, Own Their Data & Join the V4V Movement',
     url: 'https://pod.link/aHR0cHM6Ly9hbmNob3IuZm0vcy8xMTJlNjJiODAvcG9kY2FzdC9yc3M/episode/YWI2Y2ZlMGEtNDMxMS00NTY5LTg1ZTAtZWFmZjliMTFlNWVh',
