@@ -55,6 +55,10 @@ An entry without one sorts to the bottom silently — it will not fail the build
 
 Co-host order is manual and intentional (Chad and Reeds Podcast first).
 
+Co-host entries carry two links: `url` is the podcast (pod.link) and `website` is the show's
+own site. An entry with `website` renders as a plain card holding a Website and a Podcast
+link, since links can't nest; without it, the whole card is the `url` link.
+
 ### pod.link URLs
 
 Links use pod.link, which addresses a show three different ways. Existing entries use all

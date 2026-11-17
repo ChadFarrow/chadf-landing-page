@@ -2,6 +2,24 @@ import { coHostShows, guestAppearances, PodcastAppearance } from '@/data/podcast
 import SectionTitle from './SectionTitle';
 
 function PodcastCard({ podcast }: { podcast: PodcastAppearance }) {
+  // Links can't nest, so a card with two links stops being a link itself.
+  if (podcast.website) {
+    return (
+      <div className="podcast-card">
+        <span className="podcast-show">{podcast.showName}</span>
+        <span className="podcast-episode">{podcast.episode}</span>
+        <div className="podcast-links">
+          <a href={podcast.website} target="_blank" rel="noopener noreferrer">
+            Website
+          </a>
+          <a href={podcast.url} target="_blank" rel="noopener noreferrer">
+            Podcast
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <a href={podcast.url} target="_blank" rel="noopener noreferrer" className="podcast-card">
       <span className="podcast-show">{podcast.showName}</span>

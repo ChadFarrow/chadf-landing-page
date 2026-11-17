@@ -1,7 +1,10 @@
 export interface PodcastAppearance {
   showName: string;
   episode: string;
+  /** The podcast itself (pod.link). */
   url: string;
+  /** The show's own site. A card with one shows a Website and a Podcast link. */
+  website?: string;
   /** Episode publish date (ISO), taken from the show's feed. Orders guest appearances. */
   date?: string;
 }
@@ -10,12 +13,14 @@ export const coHostShows: PodcastAppearance[] = [
   {
     showName: 'Chad and Reeds Podcast',
     episode: 'Co-Host',
-    url: 'https://candr.space',
+    url: 'https://pod.link/aHR0cHM6Ly9zZXJ2ZS5wb2Rob21lLmZtL3Jzcy83YzZmNzg3NS0yYjczLTQ5MWUtYjMyYy1lMmM4ZDZlOTFkNTM',
+    website: 'https://candr.space',
   },
   {
     showName: 'Into The Doerfel-Verse',
     episode: 'Co-Host',
-    url: 'https://www.doerfelverse.com/',
+    url: 'https://pod.link/aHR0cHM6Ly93d3cuZG9lcmZlbHZlcnNlLmNvbS9mZWVkcy9pbnRvdGhlZG9lcmZlbHZlcnNlLnhtbA',
+    website: 'https://www.doerfelverse.com/',
   },
 ];
 
