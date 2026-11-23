@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal landing page for ChadF. Next.js 16.1.4 (App Router, Turbopack), React 19.2.3,
+Personal landing page for ChadF. Next.js 16.4.6 (App Router, Turbopack), React 19.2.3,
 TypeScript, plain CSS. No Tailwind. Deployed on Vercel; pushing to `main` deploys.
 
 ## Commands
